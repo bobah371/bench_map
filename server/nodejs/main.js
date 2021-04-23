@@ -44,7 +44,7 @@ var findUser = (login, password) => {
 	return 'SELECT login, hash_pass FROM ' + users_table + ' WHERE login = \'' +login+ '\' and hash_pass = \''+getHashStr(password)+ '\'';
 };
 
-const ON_ERROR_RESPONSE = 'Ooop, error';
+const ON_ERROR_RESPONSE = 'Ooops, error';
 
 const requestListener = async function (req, res) {
 
@@ -81,7 +81,7 @@ const requestListener = async function (req, res) {
 				res.writeHead(400);
 			}
 		}else if(action == '/registration'){
-			/*решитраця в аккаунте*/
+			/*регистрация в аккаунте*/
 			const login = obj['login'];
 			const email = obj['email'];
 			const password = obj['password'];
