@@ -1,0 +1,170 @@
+* {
+    box-sizing: border-box;
+    font-family: Ubuntu;
+    margin: 0;
+    padding: 0;
+  }
+
+  img {
+    width: 100%;
+    height: 928px;
+  }
+
+  h1 {
+    position: absolute;
+    width: 672px;
+    height: 208px;
+    left: 149px;
+    top: 128px;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 85px;
+    line-height: 98px;
+
+    color: #FFFFFF;
+  }
+
+  h2 {
+    position: absolute;
+    width: 533px;
+    height: 88px;
+    left: 149px;
+    top: 368px;
+    
+    font-style: normal;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 41px;
+    
+    color: #FFFFFF;  
+  }
+
+  h3 {
+    position: absolute;
+    width: 1142px;
+    height: 121px;
+    left: 149px;
+    top: 640px;
+    
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 40px;
+    /* or 133% */
+    
+    display: flex;
+    align-items: flex-end;
+    
+    color: #FFFFFF;
+  }
+
+  h4 {
+    position: absolute;
+    width: 150px;
+    height: 56px;
+    left: 149px;
+    top: 17px;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+
+  div.header-block {
+    flex-direction: column;
+    position: absolute;
+    height: 928px;
+    left: 0px;
+    top: 0px;
+  }  
+
+  div.footer-block {
+    position: absolute;
+    width: 100%;
+    height: 103px;
+    left: 0px;
+    top: 927px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    background: #413D3F;
+  }
+
+  div.logo-footer {
+    position: absolute;
+    right: 50%;
+  }
+
+  .signin-button{
+    border: none;
+    position: absolute;
+    width: 203px;
+    height: 56px;
+    left: 266px;
+    top: 496px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    border: none;
+    text-align: center;
+
+    color: #FFFFFF;
+    background: rgba(219, 163, 118, 0.9);
+    border-radius: 20px;
+  }
+
+  .login-button {
+    border: none;
+    position: absolute;
+    width: 86px;
+    height: 56px;
+    left: 149px;
+    top: 496px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    border: none;
+    text-align: center;
+
+    color: #FFFFFF;
+    background: rgba(103, 84, 81, 0.9);
+    border-radius: 20px;
+  }
+
+  .start-button {
+    border: none;
+    position: absolute;
+    width: 203px;
+    height: 56px;
+    left: 149px;
+    top: 816px;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background: #32303A;
+    color: #FFFFFF;
+    border-radius: 20px;
+  }
