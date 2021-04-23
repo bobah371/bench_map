@@ -10,6 +10,11 @@
     height: 928px;
   }
 
+  a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+
   h1 {
     position: absolute;
     width: 672px;
@@ -27,35 +32,38 @@
 
   h2 {
     position: absolute;
-    width: 533px;
-    height: 88px;
-    left: 149px;
-    top: 368px;
-    
+    width: 203px;
+    height: 40px;
+    left: 32px;
+    top: 128px;
+
+    font-family: Ubuntu;
     font-style: normal;
     font-weight: 300;
-    font-size: 36px;
-    line-height: 41px;
-    
-    color: #FFFFFF;  
+    font-size: 25px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
   }
 
   h3 {
     position: absolute;
-    width: 1142px;
-    height: 121px;
-    left: 149px;
-    top: 640px;
-    
+    width: 85px;
+    height: 40px;
+    left: 32px;
+    top: 600px;
+
+    font-family: Ubuntu;
     font-style: normal;
-    font-weight: 300;
-    font-size: 30px;
-    line-height: 40px;
-    /* or 133% */
-    
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 29px;
     display: flex;
-    align-items: flex-end;
-    
+    align-items: center;
+    text-align: center;
+
     color: #FFFFFF;
   }
 
@@ -107,55 +115,12 @@
     right: 50%;
   }
 
-  .signin-button{
-    border: none;
+  .add-button {
     position: absolute;
-    width: 203px;
+    width: 320px;
     height: 56px;
-    left: 266px;
-    top: 496px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 25px;
-    line-height: 29px;
-    display: flex;
-    align-items: center;
-    border: none;
-    text-align: center;
-
-    color: #FFFFFF;
-    background: rgba(219, 163, 118, 0.9);
-    border-radius: 20px;
-  }
-
-  .login-button {
-    border: none;
-    position: absolute;
-    width: 86px;
-    height: 56px;
-    left: 149px;
-    top: 496px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 25px;
-    line-height: 29px;
-    display: flex;
-    align-items: center;
-    border: none;
-    text-align: center;
-
-    color: #FFFFFF;
-    background: rgba(103, 84, 81, 0.9);
-    border-radius: 20px;
-  }
-
-  .start-button {
-    border: none;
-    position: absolute;
-    width: 203px;
-    height: 56px;
-    left: 149px;
-    top: 816px;
+    left: 32px;
+    top: 808px;
     font-family: Ubuntu;
     font-style: normal;
     font-weight: 300;
@@ -164,7 +129,9 @@
     display: flex;
     align-items: center;
     text-align: center;
-    background: #32303A;
+
     color: #FFFFFF;
+
+    background: #32303A;
     border-radius: 20px;
   }
