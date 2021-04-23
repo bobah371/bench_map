@@ -198,4 +198,13 @@
     
     background: #32303A;
     border-radius: 20px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+color: #FFFFFF;
   }
