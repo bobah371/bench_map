@@ -51,8 +51,21 @@
     height: 48px;
     left: 149px;
     top: 384px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 41px;
 
-    font-family: Ubuntu;
+    color: #FFFFFF;
+
+  }
+
+  p {
+    position: absolute;
+    width: 86px;
+    height: 48px;
+    left: 149px;
+    top: 384px;
     font-style: normal;
     font-weight: 300;
     font-size: 36px;
