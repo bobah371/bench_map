@@ -3,7 +3,6 @@
     font-family: Ubuntu;
     margin: 0;
     padding: 0;
-    position: absolute;
   }
 
   img {
@@ -109,6 +108,7 @@
   }
 
   .signin-button{
+    border: none;
     position: absolute;
     width: 203px;
     height: 56px;
@@ -129,6 +129,7 @@
   }
 
   .login-button {
+    border: none;
     position: absolute;
     width: 86px;
     height: 56px;
@@ -145,5 +146,25 @@
 
     color: #FFFFFF;
     background: rgba(103, 84, 81, 0.9);
+    border-radius: 20px;
+  }
+
+  .start-button {
+    border: none;
+    position: absolute;
+    width: 203px;
+    height: 56px;
+    left: 149px;
+    top: 816px;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background: #32303A;
+    color: #FFFFFF;
     border-radius: 20px;
   }
