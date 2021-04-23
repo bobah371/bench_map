@@ -10,6 +10,11 @@
     height: 928px;
   }
 
+  a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+
   h1 {
     position: absolute;
     width: 672px;
@@ -107,55 +112,13 @@
     right: 50%;
   }
 
-  .signin-button{
-    border: none;
+  .photo-text {
     position: absolute;
     width: 203px;
-    height: 56px;
-    left: 266px;
-    top: 496px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 25px;
-    line-height: 29px;
-    display: flex;
-    align-items: center;
-    border: none;
-    text-align: center;
-
-    color: #FFFFFF;
-    background: rgba(219, 163, 118, 0.9);
-    border-radius: 20px;
-  }
-
-  .login-button {
-    border: none;
-    position: absolute;
-    width: 86px;
-    height: 56px;
+    height: 32px;
     left: 149px;
     top: 496px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 25px;
-    line-height: 29px;
-    display: flex;
-    align-items: center;
-    border: none;
-    text-align: center;
 
-    color: #FFFFFF;
-    background: rgba(103, 84, 81, 0.9);
-    border-radius: 20px;
-  }
-
-  .start-button {
-    border: none;
-    position: absolute;
-    width: 203px;
-    height: 56px;
-    left: 149px;
-    top: 816px;
     font-family: Ubuntu;
     font-style: normal;
     font-weight: 300;
@@ -163,8 +126,105 @@
     line-height: 29px;
     display: flex;
     align-items: center;
-    text-align: center;
-    background: #32303A;
+
     color: #FFFFFF;
+  }
+  
+  .photo {
+    position: absolute;
+    width: 203px;
+    height: 56px;
+    left: 149px;
+    top: 528px;
+  }
+
+  .description-text {
+    position: absolute;
+    width: 320px;
+    height: 32px;
+    left: 149px;
+    top: 624px;
+
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+
+  }
+
+  .description {
+    position: absolute;
+    width: 438px;
+    height: 56px;
+    left: 149px;
+    top: 656px;
+
+    background: linear-gradient(0deg, rgba(221, 209, 140, 0.68), rgba(221, 209, 140, 0.68)), rgba(221, 209, 140, 0.68);
     border-radius: 20px;
+  }
+
+  .place-text {
+    position: absolute;
+    width: 320px;
+    height: 32px;
+    left: 150px;
+    top: 752px;
+
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+  }
+
+  .place-x {
+    position: absolute;
+    width: 203px;
+    height: 56px;
+    left: 150px;
+    top: 786px;
+
+    background: linear-gradient(0deg, rgba(221, 209, 140, 0.68), rgba(221, 209, 140, 0.68)), rgba(221, 209, 140, 0.68);
+    border-radius: 20px;
+  }
+
+  .place-y {
+    position: absolute;
+    width: 203px;
+    height: 56px;
+    left: 385px;
+    top: 786px;
+
+    background: linear-gradient(0deg, rgba(221, 209, 140, 0.68), rgba(221, 209, 140, 0.68)), rgba(221, 209, 140, 0.68);
+    border-radius: 20px;
+  }
+
+  button {
+    position: absolute;
+    width: 203px;
+    height: 56px;
+    left: 853px;
+    top: 520px;
+
+    background: #32303A;
+    border-radius: 20px;
+
+    font-style: normal;
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
   }
