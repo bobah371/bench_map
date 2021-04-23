@@ -47,20 +47,17 @@
 
   h3 {
     position: absolute;
-    width: 1142px;
-    height: 121px;
+    width: 86px;
+    height: 48px;
     left: 149px;
-    top: 640px;
-    
+    top: 384px;
+
+    font-family: Ubuntu;
     font-style: normal;
     font-weight: 300;
-    font-size: 30px;
-    line-height: 40px;
-    /* or 133% */
-    
-    display: flex;
-    align-items: flex-end;
-    
+    font-size: 36px;
+    line-height: 41px;
+
     color: #FFFFFF;
   }
 
