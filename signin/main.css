@@ -10,6 +10,11 @@
     height: 928px;
   }
 
+  a {
+    text-decoration: none;
+    color: #FFFFFF; 
+  }
+
   h1 {
     position: absolute;
     width: 672px;
