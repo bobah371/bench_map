@@ -35,8 +35,8 @@ var addUser = (login, email, password) => {
 }; 
 
 
-var addPlace = (x_pos, y_pos, type, user_id, path) =>{
-	return 'INSERT into ' + places_table + ' VALUES((SELECT MAX(id) + 1 FROM '+ places_table +'),'+ x_pos+',' + y_pos +', \''+ type+'\',\''+ path+'\','+user_id+ ')';
+var addPlace = (x_pos, y_pos, type, user_id, path, description) =>{
+	return 'INSERT into ' + places_table + ' VALUES((SELECT MAX(id) + 1 FROM '+ places_table +'),'+ x_pos+',' + y_pos +', \''+ type+'\',\''+ path+'\','+user_id+ ',\''+description+'\')';
 };
 
 
