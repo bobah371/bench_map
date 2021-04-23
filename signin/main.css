@@ -105,42 +105,97 @@
     right: 50%;
   }
 
-  .signin-button{
+  .login-text {
     position: absolute;
-    width: 203px;
-    height: 56px;
-    left: 266px;
-    top: 496px;
+    width: 320px;
+    height: 32px;
+    left: 149px;
+    top: 480px;
+    
     font-style: normal;
-    font-weight: normal;
+    font-weight: 300;
     font-size: 25px;
     line-height: 29px;
     display: flex;
     align-items: center;
-    border: none;
-    text-align: center;
+    
+    color: #FFFFFF;
+  }
+
+  .passwd-text {
+    position: absolute;
+    width: 320px;
+    height: 32px;
+    left: 149px;
+    top: 591px;
+
+    font-style: normal;
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
 
     color: #FFFFFF;
-    background: rgba(219, 163, 118, 0.9);
+  }
+
+  .mail-text {
+    position: absolute;
+    width: 437px;
+    height: 32px;
+    left: 618px;
+    top: 480px;
+
+    font-style: normal;
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+  }
+
+  .login {
+    position: absolute;
+    width: 320px;
+    height: 56px;
+    left: 149px;
+    top: 512px;
+
+    background: linear-gradient(0deg, rgba(221, 209, 140, 0.68), rgba(221, 209, 140, 0.68)), rgba(221, 209, 140, 0.68);
     border-radius: 20px;
   }
 
-  .login-button {
+  .passwd {
     position: absolute;
-    width: 86px;
+    width: 320px;
     height: 56px;
     left: 149px;
-    top: 496px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 25px;
-    line-height: 29px;
-    display: flex;
-    align-items: center;
-    border: none;
-    text-align: center;
+    top: 624px;
+    
+    background: linear-gradient(0deg, rgba(221, 209, 140, 0.68), rgba(221, 209, 140, 0.68)), rgba(221, 209, 140, 0.68);
+    border-radius: 20px;
+  }
 
-    color: #FFFFFF;
-    background: rgba(103, 84, 81, 0.9);
+  .mail {
+    position: absolute;
+    width: 437px;
+    height: 56px;
+    left: 619px;
+    top: 512px;
+    
+    background: linear-gradient(0deg, rgba(221, 209, 140, 0.68), rgba(221, 209, 140, 0.68)), rgba(221, 209, 140, 0.68);
+    border-radius: 20px;
+  }
+
+  button {
+    position: absolute;
+    width: 203px;
+    height: 56px;
+    left: 149px;
+    top: 831px;
+    
+    background: #32303A;
     border-radius: 20px;
   }
