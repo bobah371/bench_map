@@ -135,3 +135,14 @@
     background: #32303A;
     border-radius: 20px;
   }
+
+  .map {
+    position: absolute;
+    width: 75%;
+    height: 750px;
+    left: 384px;
+    top: 110px;
+    border-radius: 20px;
+  
+    background: #C4C4C4;
+  }
