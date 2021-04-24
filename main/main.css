@@ -146,3 +146,8 @@
   
     background: #C4C4C4;
   }
+
+  #map > ymaps {
+    border-radius: 20px;
+    overflow: hidden;
+    }
