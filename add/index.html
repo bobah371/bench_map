@@ -21,11 +21,11 @@
                 <input class="photo" type="file" name="photo" accept="image/*,image/jpeg">
                 
                 <span class="description-text">Укажите адрес</span>
-                <input class="description" type="text" name="description" placeholder="Введите адрес"/>
+                <input class="description" type="text" autocomplete="off" name="description" placeholder="Введите адрес"/>
 
                 <span class="place-text">Введите координаты</span>
-                <input class="place-x" type="number" name="placex" placeholder="Введите широту"/>
-                <input class="place-y" type="number" name="placey" placeholder="Введите долготу"/>
+                <input class="place-x" type="number" step="any" name="placex" placeholder="Введите широту"/>
+                <input class="place-y" type="number" step="any" name="placey" placeholder="Введите долготу"/>
                 
                 <button>Добавить</button>
             </form>

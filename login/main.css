@@ -234,7 +234,8 @@
     height: 56px;
     left: 149px;
     top: 831px;
-    
+    border: none;
+    outline: none;
     background: #32303A;
     border-radius: 20px;
     font-style: normal;
@@ -246,4 +247,36 @@
     text-align: center;
 
     color: #FFFFFF;
+  }
+
+  ::placeholder {
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+
+    color: #E4DFC0;
+  }
+
+  input {
+    border: none;
+    outline: none;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #FFFFFF;
+  }
+
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
   }
