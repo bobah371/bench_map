@@ -15,14 +15,20 @@
 
             <img src="back_image.jpg" alts="">
             <h1>Поможем вам отдохнуть</h1>
-            <h2>Карта с местами для отдыха в Петербурге</h2>
-            <h3>Если вы оказались на нашем сайте, то, скорее всего, вы думаете, где бы вам <br>присесть. 
-                <br>Если вы нашли место, о котором не знаем мы - просто добавьте его!</h3>
-            <h4>присесть.рф</h4>
-            <p class="login-button"><a href="./log_in/index.html">Войти</a></p>
-            <p class="signin-button"><a href="./signin/index.html">Регистрация</a></p>
+            <h4><a href="../index.html">присесть.рф</a></h4>
+            <h3>Вход</h3>
+            <form action="/example.php" method="GET" target="_blank">
+                
+                <span class="login-text">Введите логин</span>
+                <input class="login" type="text" name="login" autocomplete="off" placeholder="Введите логин"/>
+                
+                <span class="passwd-text">Введите пароль</span>
+                <input class="passwd" type="password" name="password" placeholder="Введите пароль"/>
+                
+                <span class="failed-text">Неверный логин или пароль</span>
 
-            <p class="start-button"><a href="./main/index.html">Присесть</a></p>
+                <button>Присесть</button>
+            </form>
         </div>
 
         <div class="footer-block" >
