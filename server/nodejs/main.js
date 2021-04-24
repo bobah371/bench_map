@@ -1,5 +1,16 @@
+<<<<<<< HEAD
 const {Pool, Client } = require('pg')
+=======
+
+
+const {Pool, Client } = require('pg');
+fs = require('fs');
+var formidable = require('formidable');
+
+var multer  = require('multer')
+>>>>>>> 5ea76c41d5349fd11885c8e86a6c8cfbb913d2cd
 const http = require("http");
+
 var qs = require('querystring');
 const url = require('url');
 var crypto = require('crypto')
@@ -25,7 +36,7 @@ var getHashStr = (data) =>{
 };
 
 var getPoints = (x, y, radius) => {
-	return 'SELECT * FROM '+ places_table +' WHERE sqrt( power(x_pos -' + x +',2) - power(y_pos -' + y +',2) ) < '+ radius;
+	return 'SELECT * FROM '+ places_table +' WHERE sqrt( power(x_pos -' + x +',2) + power(y_pos -' + y +',2) ) < '+ radius;
 };
 //todo upload photo 
 var addUser = (login, email, password) => {
@@ -103,6 +114,54 @@ actions.set('/registration', async (req, res, query) => {
 	
 });
 
+
+actions.set('/addpoint', async (req, res, query) => {
+	
+		const x = query['placex'];
+		const y = query['placey'];
+			
+		//if(x != null && y != null){
+				
+			try{
+			
+				let body = [];
+				req.on('data', (chunk) => {
+					body.push(chunk);
+				}).on('end', () => {
+					
+					var form = new formidable.IncomingForm();
+					form.parse(req, function(err, fields, files) {
+						console.log(fields);
+						if (err) {
+
+						// Check for and handle any errors here.
+						
+						console.error(err.message);
+						};
+					});
+					body = Buffer.concat(body).toString();
+					console.log(req.headers);
+					var post = qs.decode(body);
+					console.log(post);
+				});
+
+				
+				
+				res.writeHead(303, {
+				//'Location': 'signin/signed.html'
+				});
+		
+			}catch (err){
+				console.log(err);
+				res.writeHead(400);
+			}	
+				
+		//	}else{
+		//		res.writeHead(400);
+		//	}
+	
+});
+
 actions.set('/login', async (req, res, query) => {
 	
 		const login = query['login'];
@@ -114,43 +173,68 @@ actions.set('/login', async (req, res, query) => {
 		}
 		
 		try{
+			res.writeHead(200);
+			db = await client.query(findUserWithRawPassword(login, password));
 			
-			var user_id = '';
-			var pass_hash = '';
-
-			db = await client.query(findUserWithRawPassword(login, password), async (err, qres) =>{
-				
-				try{
-					
-					const id = qres['rows'][0]['id'];
-					const hash_pass = qres['rows'][0]['hash_pass'];
-					
-					
-					console.log('login user ' + login);
-					
-					res.writeHead(303, {
-						'Location': 'signin/signed.html'
-					});
-					
-					
-					//res.writeHead(303, {
-						//'Set-Cookie': 'user_id='+id,
-						//'Set-Cookie': 'hash_pass='+hash_pass,
-					//	'Location': 'main/index.html'
-					//});
-					
-				}catch(err){
-					/*cannot find a user*/
-					console.log(err);
-					res.writeHead(400);
-					return;
-				}
-				
-				
-			});
+			
+			try{
+				id = db['rows'][0]['id'];
+				hash = db['rows'][0]['hash_pass'].trim();
+				console.log('user_id='+id+'; hash_pass='+hash);
+				res.writeHead(303, [
+					['Set-Cookie', 'user_id='+id],
+					['Set-Cookie', 'hash_pass='+hash],
+					['Location', 'main/index.html']
+				]);
+			
+			}catch(err){
+				res.writeHead(303, [
+					['Location', 'log_in/unlogin.html']
+				]);
+			
+			}
+			
 			
 		}catch(err){
 			/*database error*/
+			res.writeHead(400);
+			return;
+		}
+	
+});
+
+actions.set('/loadpoints', async (req, res, query) => {
+	
+		const x = query['x'];
+		const y = query['y'];
+		const radius = query['radius'];
+	
+		if(x == null || y == null || radius == null){
+			res.writeHead(404);
+			return;
+		}
+		
+		try{
+			
+			res.writeHead(200);
+			db = await client.query(getPoints(x, y, radius));
+
+			try{
+				rows = db['rows'];
+				
+				res.write(JSON.stringify(rows));
+				
+			
+			}catch(err){
+				console.log(err);
+				res.writeHead(404);
+			
+			}
+			
+			
+		}catch(err){
+			/*database error*/
+			console.log(err);
 			res.writeHead(400);
 			return;
 		}
