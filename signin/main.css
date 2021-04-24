@@ -228,26 +228,6 @@
     color: #FFFFFF;
   }
 
-  .start-button {
-    border: none;
-    position: absolute;
-    width: 203px;
-    height: 56px;
-    left: 149px;
-    top: 816px;
-    font-family: Ubuntu;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 25px;
-    line-height: 29px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    background: #32303A;
-    color: #FFFFFF;
-    border-radius: 20px;
-  }
-
   ::placeholder {
     font-family: Ubuntu;
     font-style: normal;
