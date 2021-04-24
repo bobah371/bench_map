@@ -1,5 +1,3 @@
-
-
 const {Pool, Client } = require('pg')
 const http = require("http");
 var qs = require('querystring');
@@ -159,8 +157,6 @@ actions.set('/login', async (req, res, query) => {
 	
 });
 
-
-
 const requestListener = async function (req, res) {
 
 
@@ -185,10 +181,6 @@ const requestListener = async function (req, res) {
 		res.end();
 
 };
-
-
-
-
 
 const server = http.createServer(requestListener);
 server.listen(port, host, () => {
