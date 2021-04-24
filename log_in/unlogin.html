@@ -9,6 +9,8 @@
         <title> присесть.рф </title>
         <link href="./main.css " rel="stylesheet " />
         <title> присесть.рф </title>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script src="main.js" type="text/javascript"></script>
     </head>
     <body>
         <div class="header-block">
@@ -20,14 +22,13 @@
             <form action="/login" method="GET" target="_self">
                 
                 <span class="login-text">Введите логин</span>
-                <input class="login" type="text" name="login" autocomplete="off" placeholder="Введите логин"/>
+                <input class="login" type="text" onkeyup="checkParams()" name="login" id="login" autocomplete="off" placeholder="Введите логин"/>
                 
                 <span class="passwd-text">Введите пароль</span>
-                <input class="passwd" type="password" name="password" placeholder="Введите пароль"/>
+                <input class="passwd" type="password" onkeyup="checkParams()" name="password" id="password" placeholder="Введите пароль"/>
                 
-                <span class="failed-text">Неверный логин или пароль</span>
 
-                <button>Присесть</button>
+                <button disabled id="submit">Присесть</button>
             </form>
         </div>
 
