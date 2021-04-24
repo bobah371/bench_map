@@ -53,6 +53,10 @@ var findUserWithoutHash = (login, password) => {
 	return 'SELECT login, hash_pass FROM ' + users_table + ' WHERE login = \'' +login+ '\' and hash_pass = \''+password+ '\'';
 };
 
+var findUserWithoutHashById = (id, password) => { 
+	return 'SELECT login, hash_pass FROM ' + users_table + ' WHERE id = \'' +id+ '\' and hash_pass = \''+password+ '\'';
+};
+
 
 const ON_ERROR_RESPONSE = 'Ooops, error';
 
@@ -115,46 +119,54 @@ actions.set('/addpoint', async (req, res, query) => {
 	
 		const x = query['placex'];
 		const y = query['placey'];
+		const description = query['description'];
 			
-		//if(x != null && y != null){
+		if(x != null && y != null){
 				
 			try{
-			
-				let body = [];
-				req.on('data', (chunk) => {
-					body.push(chunk);
-				}).on('end', () => {
+
+				
+				var pairs = req['headers']['cookie'].split(';');
+				let map = '';
+				let user_id = -1;
+				let hash = '';
+				pairs.forEach((pair) => {
+					p_e = pair.split('=');
 					
-					var form = new formidable.IncomingForm();
-					form.parse(req, function(err, fields, files) {
-						console.log(fields);
-						if (err) {
-
-						// Check for and handle any errors here.
-						
-						console.error(err.message);
-						};
-					});
-					body = Buffer.concat(body).toString();
-					console.log(req.headers);
-					var post = qs.decode(body);
-					console.log(post);
+					if(p_e.length > 1){
+						p_e[0] = p_e[0].trim();
+						p_e[1] = p_e[1].trim();
+						if(p_e[0] == 'user_id'){
+							user_id = p_e[1];
+						}else if(p_e[0] == 'hash_pass'){
+							hash = p_e[1];
+						}
+					}
 				});
-
+				
+				userInDb = await client.query(findUserWithoutHashById(user_id, hash));
+				if(userInDb['rows'] == null){
+					console.log('cannot find');
+				}else{
+					db = await client.query(addPlace(x, y,'lavochka', user_id, ''/*path*/, description));
+				}
 				
 				
-				res.writeHead(303, {
+				console.log('place added by userId '+ user_id);
+				
+				res.writeHead(200, {
 				//'Location': 'signin/signed.html'
 				});
 		
 			}catch (err){
-				console.log(err);
+				/*cannot find*/
+				//console.log(err);
 				res.writeHead(400);
 			}	
 				
-		//	}else{
-		//		res.writeHead(400);
-		//	}
+			}else{
+				res.writeHead(400);
+			}
 	
 });
 
