@@ -10,8 +10,17 @@ ymaps.ready(function () {
         MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
             '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
         );
+	
+		async function getData(url = '../loadpoints?x=0&y=0&radius=1000') {
+			const response = await fetch(url);
+			return await response.json(); // parses JSON response into native JavaScript objects
+		}
+	
+	getData().then(data=>{ 
+		data.forEach((elem)=>{
+			myMap.geoObjects.add(new ymaps.Placemark([elem['x_pos'],elem['y_pos']]))
+			});
+	});
+	
 
-    myMap.geoObjects.add(new ymaps.Placemark([59.929456743379,30.29685707311]))
-	myMap.geoObjects.add(new ymaps.Placemark([59.859499709,30.2122011311]));
-	myMap.geoObjects.add(new ymaps.Placemark([59.929456743379,30.29685707311]));
 });
