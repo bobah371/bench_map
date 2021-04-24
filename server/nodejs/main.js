@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+const {Pool, Client } = require('pg')
+=======
 
 
 const {Pool, Client } = require('pg');
@@ -5,6 +8,7 @@ fs = require('fs');
 var formidable = require('formidable');
 
 var multer  = require('multer')
+>>>>>>> 5ea76c41d5349fd11885c8e86a6c8cfbb913d2cd
 const http = require("http");
 
 var qs = require('querystring');
@@ -249,8 +253,6 @@ actions.set('/loadpoints', async (req, res, query) => {
 	
 });
 
-
-
 const requestListener = async function (req, res) {
 
 
@@ -275,10 +277,6 @@ const requestListener = async function (req, res) {
 		res.end();
 
 };
-
-
-
-
 
 const server = http.createServer(requestListener);
 server.listen(port, host, () => {
