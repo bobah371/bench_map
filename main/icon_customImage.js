@@ -22,7 +22,8 @@ ymaps.ready(function () {
 			mark.events.add('click', function () {
                                            alert(elem['description']);
                                              });
-			
+                                             document.getElementById('description_adress').innerHTML(elem['description']);
+
 			myMap.geoObjects.add(mark);
 		});
 	});
