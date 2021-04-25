@@ -147,6 +147,14 @@
     background: #C4C4C4;
   }
 
+  .description {
+    position: absolute;
+    width: 320px;
+    height: 96px;
+    left: 32px;
+    top: 648px;
+  }
+
   #map > ymaps {
     border-radius: 20px;
     overflow: hidden;

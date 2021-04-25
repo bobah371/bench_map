@@ -26,7 +26,8 @@ ymaps.ready(function () {
     myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
         hintContent: 'Собственный значок метки',
         balloonContent: 'Это красивая метка'
-    }, {
+    }, 
+    {
         // Опции.
         // Необходимо указать данный тип макета.
         iconLayout: 'default#image',
@@ -37,7 +38,7 @@ ymaps.ready(function () {
         // Смещение левого верхнего угла иконки относительно
         // её "ножки" (точки привязки).
         iconImageOffset: [-5, -38]
-    }),
+    })
 
 
 });
