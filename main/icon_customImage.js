@@ -20,8 +20,9 @@ ymaps.ready(function () {
 		data.forEach((elem)=>{
 			var mark = new ymaps.Placemark([elem['x_pos'],elem['y_pos']]);
 			mark.events.add('click', function () {
-                                                document.getElementById('description_adress').innerHTML(elem['description']);
-                                             });
+												doc = document.getElementById('description_adress');
+												doc.innerHTML = elem['description'];
+											});
                                         
 
 			myMap.geoObjects.add(mark);
