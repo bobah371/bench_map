@@ -18,27 +18,12 @@ ymaps.ready(function () {
 	
 	getData().then(data=>{ 
 		data.forEach((elem)=>{
-			myMap.geoObjects.add(new ymaps.Placemark([elem['x_pos'],elem['y_pos']]))
-			});
+			myMap.geoObjects.add(new ymaps.Placemark([elem['x_pos'],elem['y_pos']]).events.add('click', function () {
+                                           alert(elem['description']);
+                                             }))
+			                    });
 	});
-	
 
-    myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-        hintContent: 'Собственный значок метки',
-        balloonContent: 'Это красивая метка'
-    }, 
-    {
-        // Опции.
-        // Необходимо указать данный тип макета.
-        iconLayout: 'default#image',
-        // Своё изображение иконки метки.
-        iconImageHref: 'images/myIcon.gif',
-        // Размеры метки.
-        iconImageSize: [30, 42],
-        // Смещение левого верхнего угла иконки относительно
-        // её "ножки" (точки привязки).
-        iconImageOffset: [-5, -38]
-    })
 
 
 });
