@@ -18,10 +18,13 @@ ymaps.ready(function () {
 	
 	getData().then(data=>{ 
 		data.forEach((elem)=>{
-			myMap.geoObjects.add(new ymaps.Placemark([elem['x_pos'],elem['y_pos']]).events.add('click', function () {
+			var mark = new ymaps.Placemark([elem['x_pos'],elem['y_pos']]);
+			mark.events.add('click', function () {
                                            alert(elem['description']);
-                                             }))
-			                    });
+                                             });
+			
+			myMap.geoObjects.add(mark);
+		});
 	});
 
 
